@@ -1,0 +1,5 @@
+01, Info                  DISM   DISM Provider Store: PID=20000 TID=14692 Failed to get and initialize the PE Provider.  Continuing by assuming that it is not a WinPE image. - CDISMProviderStore::Final_OnConnect
+2020-09-14 13:19:01, Info                  DISM   DISM Provider Store: PID=20000 TID=14692 Finished initializing the Provider Map. - CDISMProviderStore::Final_OnConnect
+2020-09-14 13:19:01, Info                  DISM   Initialized Panther logging at C:\WINDOWS\Logs\DISM\dism.log
+2020-09-14 13:19:01, Info                  DISM   DISM Manager: PID=20000 TID=14692 Successfully created the local image session and provider store. - CDISMManager::CreateLocalImageSession
+2020-09-14 13:19:01, Info                  DISM   DISM Provider Store: PID=20000 TID=14692 Getting the collec

@@ -1,0 +1,4 @@
+Operations to perform:
+  Apply all migrations: admin, auth, client_account, contenttypes, sessions
+Running migrations:
+  Applying client_account.0012_auto_20200420_1454... OK

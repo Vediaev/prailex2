@@ -1,0 +1,210 @@
+{% extends "templates/base.html" %}
+{% block title %}First edit profile{% endblock %}
+{% block content %}
+<div class="accordion"
+     id="ChoiceTypeUser">
+    <p>
+        <a class="btn btn-primary"
+           data-toggle="collapse"
+           href="#ClientProfiles"
+           role="button"
+           aria-expanded="false"
+           aria-controls="ClientProfiles">
+            Создать профиль клиента
+        </a>
+        <a class="btn btn-primary"
+           data-toggle="collapse"
+           href="#LawyerProfile"
+           role="button"
+           aria-expanded="false"
+           aria-controls="LawyerProfile">
+            Создать профиль юриста
+        </a>
+    </p>
+    <div class="collapse multi-collapse"
+         id="ClientProfiles"
+         data-parent="#ChoiceTypeUser">
+        <div class="card card-body">
+            <div class="accordion"
+                 id="ChoiceClientProfile">
+                <p>
+                    <a class="btn btn-primary"
+                       data-toggle="collapse"
+                       href="#NaturalPerson"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="NaturalPerson">
+                        Физическое лицо
+                    </a>
+                    <a class="btn btn-primary"
+                       data-toggle="collapse"
+                       href="#LegalEntity"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="LegalEntity">
+                        Юридическое лицо
+                    </a>
+                    <a class="btn btn-primary"
+                       data-toggle="collapse"
+                       href="#IndividualEntrepreneur"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="IndividualEntrepreneur">
+                        Индивидуальный предприниматель
+                    </a>
+                </p>
+                <div class="collapse multi-collapse"
+                     id="NaturalPerson"
+                     data-parent="#ChoiceClientProfile">
+                    <div class="card card-body">
+                         <form action="{% url 'create_natural_person_profile' %}"
+                               method="post"
+                               enctype="multipart/form-data">
+                             {{ natural_person_form.as_p }}
+                             {% csrf_token %}
+                             <p>
+                                 <input type="submit"
+                                        value="Save">
+                             </p>
+                         </form>
+                    </div>
+                </div>
+                <div class="collapse multi-collapse"
+                     id="LegalEntity"
+                     data-parent="#ChoiceClientProfile">
+                    <div class="card card-body">
+                         <form action="{% url 'create_legal_entity_profile' %}"
+                               method="post"
+                               enctype="multipart/form-data">
+                             {{ legal_entity_form.as_p }}
+                             {% csrf_token %}
+                             <p>
+                                 <input type="submit" value="Save">
+                             </p>
+                         </form>
+                    </div>
+                </div>
+                <div class="collapse multi-collapse"
+                     id="IndividualEntrepreneur"
+                     data-parent="#ChoiceClientProfile">
+                    <div class="card card-body">
+                         <form action="{% url 'create_individual_entrepreneur_profile' %}"
+                               method="post"
+                               enctype="multipart/form-data">
+                             {{ individual_entrepreneur_form.as_p }}
+                             {% csrf_token %}
+                             <p>
+                                 <input type="submit" value="Save">
+                             </p>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="collapse multi-collapse"
+         id="LawyerProfile"
+         data-parent="#ChoiceTypeUser">
+        <div class="card card-body">
+             <div class="accordion"
+                 id="ChoiceLawyerProfile">
+                <p>
+                    <a class="btn btn-primary"
+                       data-toggle="collapse"
+                       href="#LawFirm"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="LawFirm">
+                        Юридическая компания
+                    </a>
+                    <a class="btn btn-primary"
+                       data-toggle="collapse"
+                       href="#IndividualEntrepreneurLawyer"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="IndividualEntrepreneurLawyer">
+                        Индивидуальный предприниматель
+                    </a>
+                    <a class="btn btn-primary"
+                       data-toggle="collapse"
+                       href="#BranchLawFirm"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="BranchLawFirm">
+                        Филиал юридического лица
+                    </a>
+                    <a class="btn btn-primary"
+                       data-toggle="collapse"
+                       href="#MemberOfTheBarChamber"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="MemberOfTheBarChamber">
+                        Член адвокатской палаты
+                    </a>
+                </p>
+                <div class="collapse multi-collapse"
+                     id="LawFirm"
+                     data-parent="#ChoiceLawyerProfile">
+                    <div class="card card-body">
+                         <form action="{% url 'create_law_firm_profile' %}"
+                               method="post"
+                               enctype="multipart/form-data">
+                             {{ law_firm_form.as_p }}
+                             {% csrf_token %}
+                             <p>
+                                 <input type="submit"
+                                        value="Save">
+                             </p>
+                         </form>
+                    </div>
+                </div>
+                <div class="collapse multi-collapse"
+                     id="IndividualEntrepreneurLawyer"
+                     data-parent="#ChoiceLawyerProfile">
+                    <div class="card card-body">
+                         <form action="{% url 'create_individual_entrepreneur_lawyer_profile' %}"
+                               method="post"
+                               enctype="multipart/form-data">
+                             {{ individual_entrepreneur_lawyer_form.as_p }}
+                             {% csrf_token %}
+                             <p>
+                                 <input type="submit" value="Save">
+                             </p>
+                         </form>
+                    </div>
+                </div>
+                <div class="collapse multi-collapse"
+                     id="BranchLawFirm"
+                     data-parent="#ChoiceLawyerProfile">
+                    <div class="card card-body">
+                         <form action="{% url 'create_branch_law_firm_profile' %}"
+                               method="post"
+                               enctype="multipart/form-data">
+                             {{ branch_law_firm_form.as_p }}
+                             {% csrf_token %}
+                             <p>
+                                 <input type="submit" value="Save">
+                             </p>
+                         </form>
+                    </div>
+                </div>
+                 <div class="collapse multi-collapse"
+                     id="MemberOfTheBarChamber"
+                     data-parent="#ChoiceLawyerProfile">
+                    <div class="card card-body">
+                         <form action="{% url 'create_member_of_the_bar_chamber_profile' %}"
+                               method="post"
+                               enctype="multipart/form-data">
+                             {{ member_of_the_bar_chamber_form.as_p }}
+                             {% csrf_token %}
+                             <p>
+                                 <input type="submit" value="Save">
+                             </p>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

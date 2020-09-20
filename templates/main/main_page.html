@@ -1,0 +1,31 @@
+{% extends "templates/base.html" %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<h2>КОНТЕНТ</h2>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="Здесь должно быть первое изображение">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="Здесь должно быть второе изображение">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="Здесь должно быть третье изображение">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{% endblock %}

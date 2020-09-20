@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<!-- Start: Premium Sync CTA -->
+<section class="sync-cta bottom-line" style="display: none;">
+  <section class="get-sync-cta" id="locked-user-pay-section-customize">
+    <p>
+      <span i18n="save_custom_settings_cta"></span>
+      <span i18n="try_backup_sync"></span>
+    </p>
+    <section class="user-actions">
+      <a
+        id="get-it-now-customize"
+        i18n="get_it_now"
+        class="btn yellow long"
+        target="_blank"
+        href="https://getadblock.com/premium/enrollment/"
+      ></a>
+      <button id="close-sync-cta-customize">
+        <i class="material-icons" role="img" i18n-aria-label="close">close</i>
+      </button>
+    </section>
+  </section>
+  <section class="goodbye-sync-cta" style="display: none;">
+    <p>
+      <span i18n="wont_show_again"></span>
+      <span i18n="check_out_premium" i18n_replacement_el="premium-from-customize">
+        <a href="#mab" id="premium-from-customize" class="link-text-color link-to-tab"></a>
+      </span>
+    </p>
+  </section>
+</section>
+<!-- End: Premium Sync CTA -->
+
+<div class="option-page-box">
+  <div class="option-page-content">
+    <h1 i18n="tabcustomizetitle" class="page-title"></h1>
+    <div i18n="filterlistsrock2"></div>
+
+    <div id="divAddNewFilter">
+      <h2 i18n="blockmoreads2" class="paragraph-title"></h2>
+
+      <div>
+        <a class="add-space-between align-items-center controlsLink" href="#">
+          <span i18n="linkblockadbyurl"></span>
+          <span class="accordion-icon">
+            <i class="material-icons md-18" role="img" aria-hidden="true">arrow_drop_down_circle</i>
+          </span>
+        </a>
+        <div id="divUrlBlock" class="addControls" style="display:none;">
+          <table class="customize-entry-table">
+            <tr>
+              <td i18n="blockurlwithtext" colspan="2" class="italic light-grey-text"></td>
+              <td i18n="blockdomain" colspan="3" class="italic light-grey-text"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td>
+                <input id="txtBlockUrl" type="text" placeholder=".com/flashAd" />
+              </td>
+              <td class="italic light-grey-text center">$domain=</td>
+              <td colspan="3">
+                <input id="txtBlockUrlDomain" placeholder="*" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">
+                <button
+                  id="btnAddUrlBlock"
+                  class="btn short red right"
+                  type="button"
+                  i18n="buttonblockit"
+                  disabled="disabled"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="bottom-line"></div>
+      </div>
+
+      <div>
+        <a class="add-space-between align-items-center controlsLink" href="#">
+          <span i18n="linkhidesection"></span>
+          <span class="accordion-icon">
+            <i class="material-icons md-18" role="img" aria-hidden="true">arrow_drop_down_circle</i>
+          </span>
+        </a>
+        <div id="divCssBlock" class="addControls" style="display:none;">
+          <p class="italic light-grey-text" i18n="blacklistclickmessage"></p>
+          <table class="customize-entry-table">
+            <tr>
+              <td i18n="blockdomain" colspan="3" class="italic light-grey-text"></td>
+              <td i18n="csstomatch" colspan="3" class="italic light-grey-text"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td colspan="2">
+                <input id="txtUserFilterDomain" type="text" placeholder="*" />
+              </td>
+              <td class="center italic light-grey-text">##</td>
+              <td colspan="3">
+                <input
+                  id="txtUserFilterCss"
+                  type="text"
+                  placeholder='div[class*="exampleClass"][id="someBigAd"]'
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">
+                <button
+                  id="btnAddUserFilter"
+                  class="btn short red right"
+                  type="button"
+                  i18n="buttonblockit"
+                  disabled="disabled"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <h2 i18n="stop_bloc

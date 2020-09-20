@@ -1,0 +1,38 @@
+{% extends "templates/base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <h2>Dashboard</h2>
+        <p>
+            Welcome to your dashboard. You can
+            <a href='{% url "edit" %}'>edit your profile.</a>
+            <a href='{% url "edit_application" %}'>Создать заявку.</a>
+        </p>
+    <div>
+    <h3>Мои заявки</h3>
+        <table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">ID заявки</th>
+      <th scope="col">Автор</th>
+      <th scope="col">Краткое описание</th>
+      <th scope="col">Отрасль права</th>
+      <th scope="col">Дата создания</th>
+      <th scope="col">Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        {% for i in list_applications %}
+        <tr>
+            <th scope="row">{{i.id}}</th>
+            <td>{{filter_author}}</td>
+            <td>{{i.tag}}</td>
+            <td>{{i.area_of_law}}</td>
+            <td>{{i.time_of_application_creature}}</td>
+            <td>{{i.status_of_application}}</td>
+        </tr>
+        {% endfor %}
+  </tbody>
+</table>
+    </div>
+{% endblock %}
